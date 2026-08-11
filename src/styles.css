@@ -395,7 +395,7 @@ h2 em {
   background: var(--deep);
   color: #f8f6ed;
   display: grid;
-  grid-template-columns: minmax(330px, 28vw) 1fr;
+  grid-template-columns: minmax(390px, 33vw) 1fr;
   column-gap: clamp(45px, 6vw, 100px);
   padding: clamp(80px, 9vw, 140px) clamp(24px, 7vw, 110px);
   overflow: hidden;
@@ -431,8 +431,9 @@ h2 em {
   bottom: 42px;
   left: clamp(58px, 7vw, 112px);
   z-index: 1;
-  width: clamp(265px, 23vw, 390px);
+  width: clamp(330px, 29vw, 480px);
   height: auto;
+  opacity: 0.78;
   pointer-events: none;
   perspective: 1000px;
 }
