@@ -3,7 +3,8 @@ import { useState } from 'react'
 import { CheckCircle2, LoaderCircle } from 'lucide-react'
 
 const email = import.meta.env.VITE_CONTACT_EMAIL || 'poliresurs.kh@gmail.com'
-const endpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT
+const endpoint =
+  import.meta.env.VITE_CONTACT_FORM_ENDPOINT || `https://formsubmit.co/ajax/${email}`
 
 export default function ContactForm({ t }) {
   const [status, setStatus] = useState('idle')
@@ -11,22 +12,25 @@ export default function ContactForm({ t }) {
     event.preventDefault()
     const form = event.currentTarget
     const data = new FormData(form)
-    if (!endpoint) {
-      const subject = encodeURIComponent(
-        `Заявка с сайта: ${data.get('company') || data.get('name')}`,
-      )
-      const body = encodeURIComponent(
-        `Имя: ${data.get('name')}\nКомпания: ${data.get('company')}\nТелефон: ${data.get('phone')}\nEmail: ${data.get('email')}\n\nЗапрос:\n${data.get('message')}`,
-      )
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
-      return
-    }
     setStatus('loading')
     try {
+      const payload = {
+        name: data.get('name'),
+        company: data.get('company'),
+        phone: data.get('phone'),
+        email: data.get('email'),
+        message: data.get('message'),
+        _subject: `New Poliresurs enquiry: ${data.get('company') || data.get('name')}`,
+        _template: 'table',
+        _honey: data.get('_honey'),
+      }
       const response = await fetch(endpoint, {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
       })
       if (!response.ok) throw new Error()
       form.reset()
@@ -37,6 +41,13 @@ export default function ContactForm({ t }) {
   }
   return (
     <form className="contact-form" onSubmit={submit}>
+      <input
+        className="honeypot"
+        type="text"
+        name="_honey"
+        tabIndex="-1"
+        autoComplete="off"
+      />
       <div className="field-row">
         <label>
           {t.name}

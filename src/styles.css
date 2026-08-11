@@ -623,6 +623,14 @@ h2 em {
   color: var(--ink);
   padding: clamp(25px, 4vw, 55px);
 }
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
 .field-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
