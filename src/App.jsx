@@ -245,10 +245,18 @@ export default function App() {
               <img src={asset('warehouse.jpeg')} alt="" loading="lazy" />
             </figure>
             <figure className="production-card production-card-middle">
-              <img src={asset('silos.jpeg')} alt="" loading="lazy" />
+              <img
+                src={asset('WhatsApp Image 2026-08-11 at 12.39.20 (1).jpeg')}
+                alt=""
+                loading="lazy"
+              />
             </figure>
             <figure className="production-card production-card-front">
-              <img src={asset('cleaning-line.jpeg')} alt="" loading="lazy" />
+              <img
+                src={asset('WhatsApp Image 2026-08-11 at 12.39.20 (3).jpeg')}
+                alt=""
+                loading="lazy"
+              />
             </figure>
           </div>
           <div className="about-main">
