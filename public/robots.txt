@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://serginho915.github.io/poliresurs/sitemap.xml

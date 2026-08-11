@@ -9,11 +9,33 @@ const email = import.meta.env.VITE_CONTACT_EMAIL || 'poliresurs.kh@gmail.com'
 const phoneDisplay = '+359 892 987 604'
 const phoneHref = '+359892987604'
 const asset = (name) => `${import.meta.env.BASE_URL}images/${name}`
+const siteUrl = 'https://serginho915.github.io/poliresurs/'
+
+const seo = {
+  bg: {
+    title: 'Poliresurs — земеделски суровини за индустрията',
+    description:
+      'Poliresurs доставя, почиства и калибрира кориандър, горчица, нахут, червена леща и червен пипер за индустриални клиенти в Европа.',
+    locale: 'bg_BG',
+  },
+  en: {
+    title: 'Poliresurs — agricultural commodities for industry',
+    description:
+      'Poliresurs sources, cleans, grades and supplies coriander, mustard, chickpeas, red lentils and paprika to industrial buyers across Europe.',
+    locale: 'en_GB',
+  },
+}
+
+const updateMeta = (selector, value) => {
+  document.querySelector(selector)?.setAttribute('content', value)
+}
 
 export default function App() {
-  const [lang, setLanguage] = useState(
-    () => localStorage.getItem('poliresurs-lang') || 'bg',
-  )
+  const [lang, setLanguage] = useState(() => {
+    const urlLanguage = new URLSearchParams(window.location.search).get('lang')
+    if (urlLanguage === 'en' || urlLanguage === 'bg') return urlLanguage
+    return localStorage.getItem('poliresurs-lang') === 'en' ? 'en' : 'bg'
+  })
   const t = content[lang]
   const additionalProducts =
     lang === 'bg'
@@ -34,13 +56,25 @@ export default function App() {
   const setLang = (value) => {
     setLanguage(value)
     localStorage.setItem('poliresurs-lang', value)
+    const url = new URL(window.location.href)
+    if (value === 'en') url.searchParams.set('lang', 'en')
+    else url.searchParams.delete('lang')
+    window.history.replaceState({}, '', url)
   }
   useEffect(() => {
+    const metadata = seo[lang]
+    const canonicalUrl = lang === 'en' ? `${siteUrl}?lang=en` : siteUrl
+
     document.documentElement.lang = lang
-    document.title =
-      lang === 'bg'
-        ? 'Полиресурс — натурални суровини'
-        : 'Poliresurs — natural ingredients'
+    document.title = metadata.title
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonicalUrl)
+    updateMeta('meta[name="description"]', metadata.description)
+    updateMeta('meta[property="og:title"]', metadata.title)
+    updateMeta('meta[property="og:description"]', metadata.description)
+    updateMeta('meta[property="og:locale"]', metadata.locale)
+    updateMeta('meta[property="og:url"]', canonicalUrl)
+    updateMeta('meta[name="twitter:title"]', metadata.title)
+    updateMeta('meta[name="twitter:description"]', metadata.description)
   }, [lang])
   useEffect(() => {
     const els = document.querySelectorAll('.reveal,.reveal-item')
@@ -106,7 +140,13 @@ export default function App() {
           </div>
           <div className="hero-visual hero-image-animate">
             <div className="hero-photo">
-              <img src={asset('facility-exterior.jpeg')} alt={t.heroEyebrow} />
+              <img
+                src={asset('facility-exterior.jpeg')}
+                alt={t.heroEyebrow}
+                width="1280"
+                height="720"
+                fetchPriority="high"
+              />
             </div>
             <div className="hero-number">01</div>
             <div className="hero-badge">
@@ -160,7 +200,10 @@ export default function App() {
             ))}
           </div>
         </section>
-        <section className="visual-catalog reveal" aria-label="Additional products">
+        <section
+          className="visual-catalog reveal"
+          aria-label={lang === 'bg' ? 'Допълнителни продукти' : 'Additional products'}
+        >
           <div className="visual-catalog-intro">
             <span>03 / 06</span>
             <p>{lang === 'bg' ? 'Допълнителни категории' : 'Additional categories'}</p>
@@ -206,10 +249,22 @@ export default function App() {
         </section>
         <section className="wild section reveal" id="wild">
           <div className="wild-image">
-            <img src={asset('cleaning-line.jpeg')} alt={t.hand} />
+            <img
+              src={asset('cleaning-line.jpeg')}
+              alt={t.hand}
+              width="2048"
+              height="946"
+              loading="lazy"
+            />
             <span>{t.hand}</span>
             <div className="facility-inset" aria-hidden="true">
-              <img src={asset('silos.jpeg')} alt="" />
+              <img
+                src={asset('silos.jpeg')}
+                alt=""
+                width="720"
+                height="1280"
+                loading="lazy"
+              />
             </div>
           </div>
           <div className="wild-copy">
@@ -260,7 +315,7 @@ export default function App() {
             </p>
             <h2>{t.contactTitle}</h2>
             <p>{t.contactText}</p>
-            <div className="contact-details">
+            <address className="contact-details">
               <div>
                 <span>{lang === 'bg' ? 'Офис' : 'Office'}</span>
                 <strong>Sofia, Bulgaria</strong>
@@ -273,7 +328,7 @@ export default function App() {
                 <span>Email</span>
                 <a href={`mailto:${email}`}>{email}</a>
               </div>
-            </div>
+            </address>
           </div>
           <ContactForm t={t.form} />
         </section>
