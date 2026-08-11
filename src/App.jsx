@@ -240,6 +240,17 @@ export default function App() {
           <div className="about-label">
             <p>{t.aboutLabel}</p>
           </div>
+          <div className="production-deck" aria-hidden="true">
+            <figure className="production-card production-card-back">
+              <img src={asset('warehouse.jpeg')} alt="" loading="lazy" />
+            </figure>
+            <figure className="production-card production-card-middle">
+              <img src={asset('silos.jpeg')} alt="" loading="lazy" />
+            </figure>
+            <figure className="production-card production-card-front">
+              <img src={asset('cleaning-line.jpeg')} alt="" loading="lazy" />
+            </figure>
+          </div>
           <div className="about-main">
             <p className="eyebrow light">
               <span />
