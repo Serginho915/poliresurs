@@ -8,6 +8,7 @@ import { content } from './data.jsx'
 const email = import.meta.env.VITE_CONTACT_EMAIL || 'poliresurs.kh@gmail.com'
 const phoneDisplay = '+359 892 987 604'
 const phoneHref = '+359892987604'
+const asset = (name) => `${import.meta.env.BASE_URL}images/${name}`
 
 export default function App() {
   const [lang, setLanguage] = useState(
@@ -17,18 +18,18 @@ export default function App() {
   const additionalProducts =
     lang === 'bg'
       ? [
-          ['Бял боб', '/images/white-beans.jpeg'],
-          ['Кафяв лен', '/images/brown-flax.jpeg'],
-          ['Дафинов лист', '/images/bay-leaf.jpeg'],
-          ['Дива шипка', '/images/rosehip.jpeg'],
-          ['Орехови ядки', '/images/walnuts.jpg'],
+          ['Бял боб', asset('white-beans.jpeg')],
+          ['Кафяв лен', asset('brown-flax.jpeg')],
+          ['Дафинов лист', asset('bay-leaf.jpeg')],
+          ['Дива шипка', asset('rosehip.jpeg')],
+          ['Орехови ядки', asset('walnuts.jpg')],
         ]
       : [
-          ['White beans', '/images/white-beans.jpeg'],
-          ['Brown flaxseed', '/images/brown-flax.jpeg'],
-          ['Bay leaves', '/images/bay-leaf.jpeg'],
-          ['Wild rosehip', '/images/rosehip.jpeg'],
-          ['Walnut kernels', '/images/walnuts.jpg'],
+          ['White beans', asset('white-beans.jpeg')],
+          ['Brown flaxseed', asset('brown-flax.jpeg')],
+          ['Bay leaves', asset('bay-leaf.jpeg')],
+          ['Wild rosehip', asset('rosehip.jpeg')],
+          ['Walnut kernels', asset('walnuts.jpg')],
         ]
   const setLang = (value) => {
     setLanguage(value)
@@ -105,7 +106,7 @@ export default function App() {
           </div>
           <div className="hero-visual hero-image-animate">
             <div className="hero-photo">
-              <img src="/images/facility-exterior.jpeg" alt={t.heroEyebrow} />
+              <img src={asset('facility-exterior.jpeg')} alt={t.heroEyebrow} />
             </div>
             <div className="hero-number">01</div>
             <div className="hero-badge">
@@ -205,9 +206,11 @@ export default function App() {
         </section>
         <section className="wild section reveal" id="wild">
           <div className="wild-image">
-            <img src="/images/cleaning-line.jpeg" alt={t.hand} />
+            <img src={asset('cleaning-line.jpeg')} alt={t.hand} />
             <span>{t.hand}</span>
-            <div className="facility-inset" aria-hidden="true" />
+            <div className="facility-inset" aria-hidden="true">
+              <img src={asset('silos.jpeg')} alt="" />
+            </div>
           </div>
           <div className="wild-copy">
             <p className="eyebrow">
