@@ -42,24 +42,24 @@ export default function App() {
       ? [
           ['Бял боб', 'Бобови култури', asset('white-beans.jpeg')],
           ['Кафяв лен', 'Маслодайни семена', asset('brown-flax.jpeg')],
-          ['Златист лен', 'Маслодайни семена', asset('brown-flax.jpeg')],
+          ['Златист лен', 'Маслодайни семена', asset('golden-flax.jpg')],
           ['Дафинов лист', 'Подправки', asset('bay-leaf.jpeg')],
           ['Дива шипка', 'Ръчен сбор', asset('rosehip.jpeg')],
-          ['Див чесън', 'Ръчен сбор', asset('laurel.jpeg')],
-          ['Мащерка', 'Ръчен сбор', asset('lavr.jpeg')],
-          ['Липов цвят', 'Суровини за фиточай', asset('laurel.jpeg')],
-          ['Цвят от бъз', 'Суровини за фиточай', asset('lavr.jpeg')],
+          ['Див чесън', 'Ръчен сбор', asset('wild-garlic.jpg')],
+          ['Мащерка', 'Ръчен сбор', asset('thyme.jpg')],
+          ['Липов цвят', 'Суровини за фиточай', asset('linden-blossom.jpg')],
+          ['Цвят от бъз', 'Суровини за фиточай', asset('elderflower.jpg')],
         ]
       : [
           ['White beans', 'Pulses', asset('white-beans.jpeg')],
           ['Brown flaxseed', 'Oilseeds', asset('brown-flax.jpeg')],
-          ['Golden flaxseed', 'Oilseeds', asset('brown-flax.jpeg')],
+          ['Golden flaxseed', 'Oilseeds', asset('golden-flax.jpg')],
           ['Bay leaves', 'Spices', asset('bay-leaf.jpeg')],
           ['Wild rosehip', 'Hand-picked', asset('rosehip.jpeg')],
-          ['Wild garlic', 'Hand-picked', asset('laurel.jpeg')],
-          ['Thyme', 'Hand-picked', asset('lavr.jpeg')],
-          ['Linden blossom', 'Herbal tea ingredients', asset('laurel.jpeg')],
-          ['Elderflower', 'Herbal tea ingredients', asset('lavr.jpeg')],
+          ['Wild garlic', 'Hand-picked', asset('wild-garlic.jpg')],
+          ['Thyme', 'Hand-picked', asset('thyme.jpg')],
+          ['Linden blossom', 'Herbal tea ingredients', asset('linden-blossom.jpg')],
+          ['Elderflower', 'Herbal tea ingredients', asset('elderflower.jpg')],
         ]
   const setLang = (value) => {
     setLanguage(value)
