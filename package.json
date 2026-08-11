@@ -1,0 +1,22 @@
+{
+  "name": "poliresurs-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort --force",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "lucide-react": "0.468.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vite": "5.4.21"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
