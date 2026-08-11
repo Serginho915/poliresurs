@@ -40,18 +40,26 @@ export default function App() {
   const additionalProducts =
     lang === 'bg'
       ? [
-          ['Бял боб', asset('white-beans.jpeg')],
-          ['Кафяв лен', asset('brown-flax.jpeg')],
-          ['Дафинов лист', asset('bay-leaf.jpeg')],
-          ['Дива шипка', asset('rosehip.jpeg')],
-          ['Орехови ядки', asset('walnuts.jpg')],
+          ['Бял боб', 'Бобови култури', asset('white-beans.jpeg')],
+          ['Кафяв лен', 'Маслодайни семена', asset('brown-flax.jpeg')],
+          ['Златист лен', 'Маслодайни семена', asset('brown-flax.jpeg')],
+          ['Дафинов лист', 'Подправки', asset('bay-leaf.jpeg')],
+          ['Дива шипка', 'Ръчен сбор', asset('rosehip.jpeg')],
+          ['Див чесън', 'Ръчен сбор', asset('laurel.jpeg')],
+          ['Мащерка', 'Ръчен сбор', asset('lavr.jpeg')],
+          ['Липов цвят', 'Суровини за фиточай', asset('laurel.jpeg')],
+          ['Цвят от бъз', 'Суровини за фиточай', asset('lavr.jpeg')],
         ]
       : [
-          ['White beans', asset('white-beans.jpeg')],
-          ['Brown flaxseed', asset('brown-flax.jpeg')],
-          ['Bay leaves', asset('bay-leaf.jpeg')],
-          ['Wild rosehip', asset('rosehip.jpeg')],
-          ['Walnut kernels', asset('walnuts.jpg')],
+          ['White beans', 'Pulses', asset('white-beans.jpeg')],
+          ['Brown flaxseed', 'Oilseeds', asset('brown-flax.jpeg')],
+          ['Golden flaxseed', 'Oilseeds', asset('brown-flax.jpeg')],
+          ['Bay leaves', 'Spices', asset('bay-leaf.jpeg')],
+          ['Wild rosehip', 'Hand-picked', asset('rosehip.jpeg')],
+          ['Wild garlic', 'Hand-picked', asset('laurel.jpeg')],
+          ['Thyme', 'Hand-picked', asset('lavr.jpeg')],
+          ['Linden blossom', 'Herbal tea ingredients', asset('laurel.jpeg')],
+          ['Elderflower', 'Herbal tea ingredients', asset('lavr.jpeg')],
         ]
   const setLang = (value) => {
     setLanguage(value)
@@ -214,12 +222,15 @@ export default function App() {
             </h2>
           </div>
           <div className="visual-catalog-grid">
-            {additionalProducts.map(([name, image], index) => (
+            {additionalProducts.map(([name, category, image], index) => (
               <article className={`visual-product item-${index + 1}`} key={name}>
                 <img src={image} alt={name} loading="lazy" />
                 <div>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <h3>{name}</h3>
+                  <span>{category}</span>
+                  <div>
+                    <small>{String(index + 1).padStart(2, '0')}</small>
+                    <h3>{name}</h3>
+                  </div>
                 </div>
               </article>
             ))}
