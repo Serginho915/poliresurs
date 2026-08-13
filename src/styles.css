@@ -1268,6 +1268,302 @@ footer small {
   font: 20px var(--serif);
   font-weight: 400;
 }
+.partner-showcase {
+  background: #f7d640;
+}
+.soup-cover {
+  position: relative;
+  min-height: 810px;
+  overflow: hidden;
+  padding: 70px clamp(28px, 5.5vw, 90px) 0;
+  background: #f7d640;
+  color: #050505;
+}
+.soup-cover-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+}
+.soup-cover-copy p {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.soup-cover-copy h2 {
+  margin: 0;
+  font: 800 clamp(66px, 7vw, 112px)/0.88 var(--sans);
+  letter-spacing: -0.065em;
+}
+.soup-cover-copy strong {
+  display: block;
+  margin-top: 16px;
+  font-size: clamp(18px, 2vw, 28px);
+}
+.soup-mark {
+  position: absolute;
+  top: 42px;
+  right: 5%;
+  z-index: 4;
+  width: 170px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  border: 4px solid #050505;
+  border-radius: 46% 54% 52% 48%;
+  background: #fff;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 0.9;
+  text-align: center;
+  transform: rotate(5deg);
+}
+.pack-line {
+  position: absolute;
+  right: 3%;
+  bottom: -12px;
+  left: 3%;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: end;
+}
+.ingredient-pack {
+  position: relative;
+  height: 430px;
+  overflow: hidden;
+  border: 1px solid rgba(10, 10, 10, 0.22);
+  border-radius: 18px 18px 5px 5px;
+  background: #b99169;
+  box-shadow: 0 16px 28px rgba(62, 48, 7, 0.18);
+  transform-origin: bottom;
+}
+.ingredient-pack:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+.ingredient-pack:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+.ingredient-pack:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 35%);
+  pointer-events: none;
+  z-index: 3;
+}
+.pack-brand {
+  height: 72px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+.pack-name {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  min-height: 74px;
+  padding: 10px;
+  background: var(--pack-color, #f1bb35);
+  font: 21px/1.05 var(--serif);
+  text-align: center;
+}
+.pack-detail {
+  position: relative;
+  z-index: 2;
+  padding: 9px 5px;
+  background: #174d68;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ingredient-pack img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+.pack-cream {
+  --pack-color: #efe3ba;
+}
+.pack-orange {
+  --pack-color: #efad47;
+}
+.pack-red {
+  --pack-color: #ec6e42;
+}
+.pack-blue {
+  --pack-color: #b7d6df;
+}
+.pack-green {
+  --pack-color: #8fbd43;
+}
+.market-slide {
+  position: relative;
+  min-height: 720px;
+  padding: clamp(65px, 7vw, 105px) clamp(28px, 4vw, 65px);
+  background:
+    linear-gradient(rgba(17, 38, 10, 0.38), rgba(17, 38, 10, 0.55)),
+    var(--market-image) center/cover;
+}
+.market-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1480px;
+  margin: auto;
+}
+.market-panel {
+  overflow: hidden;
+  border-radius: 27px;
+  background: #f1efec;
+}
+.market-panel header {
+  min-height: 170px;
+  padding: 34px 38px;
+  background: #f4ad00;
+  color: #090909;
+  font-size: clamp(18px, 1.75vw, 28px);
+  line-height: 1.12;
+}
+.market-panel header strong {
+  display: block;
+}
+.retail-names,
+.country-grid {
+  min-height: 285px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 45px 38px;
+}
+.retail-names b {
+  font-size: clamp(17px, 1.8vw, 29px);
+  text-align: center;
+}
+.country-grid > div {
+  display: grid;
+  gap: 7px;
+  text-align: center;
+}
+.country-grid small {
+  font-size: 10px;
+}
+.flag {
+  display: block;
+  height: 58px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.flag-de {
+  background: linear-gradient(#111 0 33%, #d71920 33% 66%, #f5ce23 66%);
+}
+.flag-gb {
+  background: linear-gradient(
+    135deg,
+    #174681 44%,
+    #fff 44% 48%,
+    #c8102e 48% 54%,
+    #fff 54% 58%,
+    #174681 58%
+  );
+}
+.flag-ca {
+  background: linear-gradient(90deg, #e31b23 0 25%, #fff 25% 75%, #e31b23 75%);
+}
+.flag-us {
+  background: repeating-linear-gradient(#b22234 0 5px, #fff 5px 10px);
+}
+.flag-fr {
+  background: linear-gradient(90deg, #123b72 0 33%, #fff 33% 66%, #e5363d 66%);
+}
+.flag-si {
+  background: linear-gradient(#fff 0 33%, #1655a4 33% 66%, #e52837 66%);
+}
+.flag-pl {
+  background: linear-gradient(#fff 0 50%, #dc143c 50%);
+}
+.flag-sk {
+  background: linear-gradient(#fff 0 33%, #1655a4 33% 66%, #e52837 66%);
+}
+@media (max-width: 900px) {
+  .soup-cover {
+    min-height: 920px;
+  }
+  .soup-mark {
+    width: 120px;
+    font-size: 20px;
+    opacity: 0.9;
+  }
+  .pack-line {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ingredient-pack {
+    height: 285px;
+  }
+  .ingredient-pack:nth-child(-n + 3) {
+    display: none;
+  }
+  .ingredient-pack img {
+    height: 115px;
+  }
+  .pack-brand {
+    height: 48px;
+  }
+  .pack-name {
+    min-height: 58px;
+    font-size: 16px;
+  }
+  .market-panels {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .soup-cover {
+    min-height: 780px;
+    padding-inline: 22px;
+  }
+  .soup-cover-copy h2 {
+    font-size: 49px;
+  }
+  .soup-cover-copy {
+    padding-top: 70px;
+  }
+  .soup-mark {
+    top: 24px;
+    right: 20px;
+    width: 92px;
+    font-size: 15px;
+  }
+  .pack-line {
+    right: -12%;
+    left: -12%;
+  }
+  .ingredient-pack {
+    height: 255px;
+  }
+  .ingredient-pack img {
+    height: 100px;
+  }
+  .pack-detail {
+    font-size: 9px;
+  }
+  .market-slide {
+    padding-inline: 16px;
+  }
+  .market-panel header {
+    padding: 27px 24px;
+  }
+  .retail-names,
+  .country-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 22px;
+  }
+}
 .section-heading {
   padding-bottom: 38px;
   border-bottom: 1px solid var(--line);

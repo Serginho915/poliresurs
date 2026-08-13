@@ -3,6 +3,7 @@ import { ArrowDown, Check, Leaf, PackageCheck, Sprout } from 'lucide-react'
 import Header from './components/Header'
 import ProductCard from './components/ProductCard'
 import ContactForm from './components/ContactForm'
+import PartnerShowcase from './components/PartnerShowcase'
 import { content } from './data.jsx'
 
 const email = import.meta.env.VITE_CONTACT_EMAIL || 'poliresurs.kh@gmail.com'
@@ -236,6 +237,7 @@ export default function App() {
             ))}
           </div>
         </section>
+        <PartnerShowcase lang={lang} />
         <section className="about reveal" id="about">
           <div className="about-label">
             <p>{t.aboutLabel}</p>
