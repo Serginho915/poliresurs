@@ -68,7 +68,7 @@ export const content = {
         'Леща',
         'Произход: Украйна',
         'Производство и доставка за индустриални клиенти на турския пазар.',
-        image('red-lentils.jpg'),
+        image('lentils.jpeg'),
         'clay',
       ],
       [
@@ -244,7 +244,7 @@ export const content = {
         'Lentils',
         'Origin: Ukraine',
         'Produced and sourced for industrial buyers in the Turkish market.',
-        image('red-lentils.jpg'),
+        image('lentils.jpeg'),
         'clay',
       ],
       [
