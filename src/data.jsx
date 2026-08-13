@@ -47,7 +47,7 @@ export const content = {
         'Бяла горчица',
         'Индустриална суровина',
         'Почистване и подготовка за производители в Германия и България.',
-        image('white-mustard.jpg'),
+        image('mustard.jpg'),
         'oat',
       ],
       [
@@ -61,7 +61,7 @@ export const content = {
         'Нахут',
         'Калибър 8+ мм',
         'Сортиране за пакетиране; малката фракция се насочва към производство на хумус.',
-        image('chickpeas.jpg'),
+        image('nut.jpg'),
         'sage',
       ],
       [
@@ -223,7 +223,7 @@ export const content = {
         'White mustard',
         'Industrial ingredient',
         'Cleaned and prepared for manufacturers in Germany and Bulgaria.',
-        image('white-mustard.jpg'),
+        image('mustard.jpg'),
         'oat',
       ],
       [
@@ -237,7 +237,7 @@ export const content = {
         'Chickpeas',
         '8+ mm grade',
         'Large grade for packers; smaller fraction supplied for hummus production.',
-        image('chickpeas.jpg'),
+        image('nut.jpg'),
         'sage',
       ],
       [

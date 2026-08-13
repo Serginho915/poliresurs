@@ -40,23 +40,23 @@ export default function App() {
   const additionalProducts =
     lang === 'bg'
       ? [
-          ['Бял боб', 'Бобови култури', asset('white-beans.jpeg')],
+          ['Бял боб', 'Бобови култури', asset('PHOTO-2026-08-13-11-30-58.jpg')],
           ['Кафяв лен', 'Маслодайни семена', asset('brown-flax.jpeg')],
           ['Златист лен', 'Маслодайни семена', asset('golden-flax.jpg')],
           ['Дафинов лист', 'Подправки', asset('bay-leaf.jpeg')],
           ['Дива шипка', 'Ръчен сбор', asset('rosehip.jpeg')],
-          ['Див чесън', 'Ръчен сбор', asset('wild-garlic.jpg')],
+          ['Див чесън', 'Ръчен сбор', asset('wildGarlic.jpg')],
           ['Мащерка', 'Ръчен сбор', asset('thyme.jpg')],
           ['Липов цвят', 'Суровини за фиточай', asset('linden-blossom.jpg')],
           ['Цвят от бъз', 'Суровини за фиточай', asset('elderflower.jpg')],
         ]
       : [
-          ['White beans', 'Pulses', asset('white-beans.jpeg')],
+          ['White beans', 'Pulses', asset('PHOTO-2026-08-13-11-30-58.jpg')],
           ['Brown flaxseed', 'Oilseeds', asset('brown-flax.jpeg')],
           ['Golden flaxseed', 'Oilseeds', asset('golden-flax.jpg')],
           ['Bay leaves', 'Spices', asset('bay-leaf.jpeg')],
           ['Wild rosehip', 'Hand-picked', asset('rosehip.jpeg')],
-          ['Wild garlic', 'Hand-picked', asset('wild-garlic.jpg')],
+          ['Wild garlic', 'Hand-picked', asset('wildGarlic.jpg')],
           ['Thyme', 'Hand-picked', asset('thyme.jpg')],
           ['Linden blossom', 'Herbal tea ingredients', asset('linden-blossom.jpg')],
           ['Elderflower', 'Herbal tea ingredients', asset('elderflower.jpg')],
