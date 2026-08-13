@@ -15,13 +15,13 @@ const seo = {
   bg: {
     title: 'Poliresurs — земеделски суровини за индустрията',
     description:
-      'Poliresurs доставя, почиства и калибрира кориандър, горчица, нахут, червена леща и червен пипер за индустриални клиенти в Европа.',
+      'Poliresurs доставя, почиства и калибрира кориандър, горчица, нахут, леща и червен пипер за индустриални клиенти в Европа.',
     locale: 'bg_BG',
   },
   en: {
     title: 'Poliresurs — agricultural commodities for industry',
     description:
-      'Poliresurs sources, cleans, grades and supplies coriander, mustard, chickpeas, red lentils and paprika to industrial buyers across Europe.',
+      'Poliresurs sources, cleans, grades and supplies coriander, mustard, chickpeas, lentils and paprika to industrial buyers across Europe.',
     locale: 'en_GB',
   },
 }

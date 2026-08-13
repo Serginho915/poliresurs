@@ -65,7 +65,7 @@ export const content = {
         'sage',
       ],
       [
-        'Червена леща',
+        'Леща',
         'Произход: Украйна',
         'Производство и доставка за индустриални клиенти на турския пазар.',
         image('red-lentils.jpg'),
@@ -241,7 +241,7 @@ export const content = {
         'sage',
       ],
       [
-        'Red lentils',
+        'Lentils',
         'Origin: Ukraine',
         'Produced and sourced for industrial buyers in the Turkish market.',
         image('red-lentils.jpg'),
