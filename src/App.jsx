@@ -48,7 +48,7 @@ export default function App() {
           ['Див чесън', 'Ръчен сбор', asset('wildGarlic.jpg')],
           ['Мащерка', 'Ръчен сбор', asset('thyme.jpg')],
           ['Липов цвят', 'Суровини за фиточай', asset('linden-blossom.jpg')],
-          ['Цвят от бъз', 'Суровини за фиточай', asset('elderflower.jpg')],
+          ['Цвят от бъз', 'Суровини за фиточай', asset('buzina.jpeg')],
         ]
       : [
           ['White beans', 'Pulses', asset('PHOTO-2026-08-13-11-30-58.jpg')],
@@ -59,7 +59,7 @@ export default function App() {
           ['Wild garlic', 'Hand-picked', asset('wildGarlic.jpg')],
           ['Thyme', 'Hand-picked', asset('thyme.jpg')],
           ['Linden blossom', 'Herbal tea ingredients', asset('linden-blossom.jpg')],
-          ['Elderflower', 'Herbal tea ingredients', asset('elderflower.jpg')],
+          ['Elderflower', 'Herbal tea ingredients', asset('buzina.jpeg')],
         ]
   const setLang = (value) => {
     setLanguage(value)
