@@ -65,7 +65,7 @@ export default function PartnerShowcase({ lang }) {
             <div className="retailer-grid">
               {retailers.map(([file, name]) => (
                 <div className="partner-logo" key={file}>
-                  <img src={asset(`partners/${file}.png`)} alt={name} loading="lazy" />
+                  <img src={asset(`partners/${file}.svg`)} alt={name} loading="lazy" />
                 </div>
               ))}
             </div>
