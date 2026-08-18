@@ -79,6 +79,7 @@ cp .env.example .env
 ```env
 VITE_CONTACT_EMAIL=poliresurs.kh@gmail.com
 VITE_CONTACT_FORM_ENDPOINT=
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 ### Режимы работы формы
@@ -86,6 +87,15 @@ VITE_CONTACT_FORM_ENDPOINT=
 Если `VITE_CONTACT_FORM_ENDPOINT` указан, форма отправляет `POST`-запрос на заданный endpoint. Можно использовать Formspree, Web3Forms или собственный backend.
 
 Если endpoint пустой, форма открывает почтовое приложение пользователя и создаёт готовое письмо на адрес из `VITE_CONTACT_EMAIL`.
+
+### Google Analytics 4
+
+1. Создайте ресурс GA4 для `https://poliresurs.bg` в [Google Analytics](https://analytics.google.com/).
+2. Откройте **Admin → Data streams → Web** и скопируйте Measurement ID вида `G-XXXXXXXXXX`.
+3. Добавьте его в `.env` как `VITE_GA_MEASUREMENT_ID`.
+4. Выполните `npm run build` заново и загрузите содержимое `dist` на хостинг.
+
+Аналитика загружается только после согласия посетителя. Успешная отправка формы регистрируется как событие `generate_lead`; данные полей формы в Google Analytics не передаются.
 
 Публичные контакты компании находятся в `src/App.jsx`:
 

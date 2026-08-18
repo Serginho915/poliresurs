@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://serginho915.github.io/poliresurs/sitemap.xml
+Sitemap: https://poliresurs.bg/sitemap.xml

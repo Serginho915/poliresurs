@@ -4,13 +4,14 @@ import Header from './components/Header'
 import ProductCard from './components/ProductCard'
 import ContactForm from './components/ContactForm'
 import PartnerShowcase from './components/PartnerShowcase'
+import AnalyticsConsent from './components/AnalyticsConsent'
 import { content } from './data.jsx'
 
 const email = import.meta.env.VITE_CONTACT_EMAIL || 'poliresurs.kh@gmail.com'
 const phoneDisplay = '+359 892 987 604'
 const phoneHref = '+359892987604'
 const asset = (name) => `${import.meta.env.BASE_URL}images/${name}`
-const siteUrl = 'https://serginho915.github.io/poliresurs/'
+const siteUrl = 'https://poliresurs.bg/'
 
 const seo = {
   bg: {
@@ -377,6 +378,7 @@ export default function App() {
         <a href="#top">{t.top}</a>
         <small>© {new Date().getFullYear()} Poliresurs</small>
       </footer>
+      <AnalyticsConsent lang={lang} />
     </div>
   )
 }

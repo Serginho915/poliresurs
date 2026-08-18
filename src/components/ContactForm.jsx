@@ -35,6 +35,9 @@ export default function ContactForm({ t }) {
       if (!response.ok) throw new Error()
       form.reset()
       setStatus('sent')
+      window.gtag?.('event', 'generate_lead', {
+        form_name: 'contact_form',
+      })
     } catch {
       setStatus('error')
     }
