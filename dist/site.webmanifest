@@ -1,0 +1,16 @@
+{
+  "name": "Poliresurs",
+  "short_name": "Poliresurs",
+  "description": "Agricultural commodities for industrial buyers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf6",
+  "theme_color": "#20352a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
